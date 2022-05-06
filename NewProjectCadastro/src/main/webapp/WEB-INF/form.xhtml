@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	lang="pt-br">
+
+<h:head>
+	<meta http-equi="Content-Type" content="text/html; charset=ISO-8859-1"/>
+	
+	<title>Cadastro </title>
+
+	
+</h:head>
+
+<body>
+
+	<h:form>
+		<h:panelGrid columns="2">
+		<f:facet name="header">
+			Cadastro de Usuário
+		</f:facet>
+		
+		Nome:
+		<imputText value= "#{cadastrobean.pessoa.nome}"/>
+		
+		E-mail:
+		<imputText value= "#{cadastrobean.pessoa.email}"/>
+		
+		Data de Nascimento:
+		<imputText value= "#{cadastrobean.pessoa.datanasc}">
+		<f:convertDateTime patern="dd/MM/yyyy">
+		</f:convertDateTime>
+		</imputText>
+	
+		Endereço Residencial:
+		Rua:
+		<imputText value="#{cadastrobean.endereco.endresidencial.rua}"/>
+		Nº:
+		<imputText value="#{cadastrobean.endereco.endresidencial.num}"/>
+		
+		Complemento:
+		<imputText value="#{cadastrobean.endereco.endresidencial.complemento}"/>
+		
+		Bairro:
+		<imputText value="#{cadastrobean.endereco.endresidencial.bairro}"/>
+		
+		Cep:
+		<imputText value="#{cadastrobean.endereco.endresidencial.cep}"/>
+		
+		Cidade:
+		<imputText value="#{cadastrobean.endereco.endresidencial.cidade}"/>
+		
+		Estado:
+		<imputText value="#{cadastrobean.endereco.endresidencial.estado}"/>
+		
+		Telefone Residencial:
+		<imputText value="#{cadastrobean.pessoa.tel}"/>
+		
+		Nome da Empresa:
+		<imputText value="#{cadastrobean.nomeempresa}"/>
+		
+		Telefone Comercial:
+		<imputText value="#{cadastrobean.pessoa.telempresa}"/>
+		
+		Endereço Comercial:
+		Rua:
+		<imputText value="#{cadastrobean.pessoa.endcomercial.rua}">
+		
+		Nº:
+		<imputText value="#{cadastrobean.pessoa.endcomercial.num}">
+		
+		Complemento:
+		<imputText value="#{cadastrobean.pessoa.endcomercial.complemento}">
+		
+		Bairro:
+		<imputText value="#{cadastrobean.pessoa.endcomercial.bairro}">
+		
+		Cep:
+		<imputText value="#{cadastrobean.pessoa.endcomercial.cep}">
+		
+		Cidade:
+		<imputText value="#{cadastrobean.pessoa.endcomercial.cidade}">
+		
+		Estado:
+		<imputText value="#{cadastrobean.pessoa.endcomercial.estado}">
+
+		Cargo:
+		<imputText value = "#{cadastrobean.pessoa.Cargo}"/>
+		
+		Salário:
+		<imputText value="#{cadastro.pessoa.salario}"/>
+	
+		
+		</h:panelGrid>
+		<h:commandButton value="Cadastrar" action="info"/>
+
+	</h:form>
+
+</body>
+</html>
