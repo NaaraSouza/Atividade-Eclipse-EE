@@ -7,10 +7,10 @@ import javax.faces.context.Flash;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@Named
-@RequestScoped
+@Named //É usado parfa fazer a Inversão de Controle e Injeção de Dependências.
+@RequestScoped // Um objeto que contém as informações necessárias para invocar um método
 
-public class PageBean implements Serializable{
+public class PageBean implements Serializable{ // O implements Serializable Basicamente serve para habilitar que um objeto de uma determinada classe possa ter seu estado persistido pela api padrão do java
 
 	private String soma;
 	Double num1;
@@ -50,7 +50,7 @@ public class PageBean implements Serializable{
 	}
 
 
-	@Inject
+	@Inject //nos permite definir um ponto de injeção que é injetado durante a instanciação do bean.
 	private Flash flash;
 	
 
