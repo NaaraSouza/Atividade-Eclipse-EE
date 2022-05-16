@@ -7,9 +7,9 @@ import javax.inject.Named;
 
 import br.com.senai.naarasouza.model.Linguagem;
 
-@SuppressWarnings("serial")
-@RequestScoped
-@Named("cadastro")
+@SuppressWarnings("serial") //é uma notação que serve para impedir o compilador de emitir algumas advertências.
+@RequestScoped // Um objeto que contém as informações necessárias para invocar um método
+@Named("cadastro") //É usado parfa fazer a Inversão de Controle e Injeção de Dependências.
 public class CadastroBean implements Serializable {
 
 	private String nome;
@@ -76,7 +76,7 @@ public class CadastroBean implements Serializable {
 		this.linguagens = linguagens;
 	}
 	
-	//M�TODO PARA RETORNAR STRING
+	//MÉTODO PARA RETORNAR STRING
 	
 	public String getLinguagensAsString(){
 		String str="";
