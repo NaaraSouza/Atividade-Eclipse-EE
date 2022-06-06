@@ -11,12 +11,12 @@ import javax.inject.Named;
 import org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider;
 
 
-@Named("cadastrobean")
-@RequestScoped
-@SessionScoped
+@Named("cadastrobean")//É usado parfa fazer a Inversão de Controle e Injeção de Dependências.
+@RequestScoped // Um objeto que contém como informações visíveis // Um objeto que contém um método
+@SessionScoped // permite navegar para uma outra página, e abrir a mesma sessão em uma segunda aba do navegador.
 
 
-public class PageBean implements Serializable {
+public class PageBean implements Serializable { // O implementa Serializable basicamente serve para habilitar que um objeto possa de uma determinada classe ter seu estado persistente pela API padrão do java
 	
 	private Pessoa pessoa;
 	
