@@ -10,7 +10,8 @@ import br.com.senai.naarasouza.model.Linguagem;
 @SuppressWarnings("serial") //é uma notação que serve para impedir o compilador de emitir algumas advertências.
 @RequestScoped // Um objeto que contém as informações necessárias para invocar um método
 @Named("cadastro") //É usado parfa fazer a Inversão de Controle e Injeção de Dependências.
-public class CadastroBean implements Serializable {
+
+public class CadastroBean implements Serializable {// O implementa Serializable basicamente serve para habilitar que um objeto possa de uma determinada classe ter seu estado persistente pela API padrão do java
 
 	private String nome;
 	private String email;
