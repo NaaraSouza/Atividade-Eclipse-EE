@@ -1,6 +1,6 @@
 package br.com.senai.naarasouza.application.config;
 
-public class Interesse extends Interesses {
+public class Interesse extends Interesses { //Usa-se extends quando você deseja aplicar herança á sua classe
 
 	private Integer id;
 	private String area;
